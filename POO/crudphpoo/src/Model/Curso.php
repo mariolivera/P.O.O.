@@ -2,7 +2,9 @@
 
 declare(strict_types=1);
 
-class curso
+namespace App\Model;
+
+class Curso
 {
     public string $nome;
     public int $cargaHoraria;

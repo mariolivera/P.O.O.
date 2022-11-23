@@ -1,10 +1,12 @@
 <?php
 
 declare(strict_types=1);
-use DateTime; //uma forma de importe do php.
 
+namespace App\Model;
+
+use DateTime; //uma forma de importe do php.
 //aqui vai ficar a definição do caminho ate essa 
-class alunos
+class Alunos extends Pessoa
 {
     public string $nome;
     public string $cpf;

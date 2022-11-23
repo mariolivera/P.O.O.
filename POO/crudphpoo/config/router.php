@@ -1,9 +1,14 @@
 <?php
 
-include '../src/Controller/AlunoController.php';
-include '../src/Controller/ProfessorControler.php';
-include '../src/Controller/CursoController.php';
-include '../src/Controller/SiteController.php';
+use App\Controller\AlunoController;
+use App\Controller\CursoController;
+use App\Controller\ProfessorController;
+use App\Controller\SiteController;
+
+// include '../src/Controller/AlunoController.php';
+// include '../src/Controller/ProfessorControler.php';
+// include '../src/Controller/CursoController.php';
+// include '../src/Controller/SiteController.php';
 
 function criarRota(string $controllerNome, string $methodNome):array
 {
@@ -16,6 +21,7 @@ function criarRota(string $controllerNome, string $methodNome):array
 $rotas = 
 [
     '/' => criarRota(SiteController::class, 'inicio'),
+
     '/alunos/listar' => criarRota(AlunoController::class, 'listar'),
     '/alunos/novo' => criarRota(AlunoController::class, 'cadastrar'),
     '/alunos/editar' => criarRota(AlunoController::class, 'editar'),
