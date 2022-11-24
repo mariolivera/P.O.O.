@@ -7,10 +7,8 @@ use mysqli;
 use PDO;
 class DatabaseConnection
 {
-
-    public static function abrirConexao()
+    public static function abrirConexao() :PDO
     {
-        $db = DB_NAME;
-        return new PDO("mysql:host=localhost;dbname={$db}", DB_USER, DB_PASSWORD);
+        return new PDO("mysql:host=localhost;dbname=".DB_NAME, DB_USER, DB_PASSWORD);
     }
 }
