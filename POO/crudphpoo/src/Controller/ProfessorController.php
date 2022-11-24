@@ -14,7 +14,7 @@ class ProfessorController extends AbstractController
 
         $professores = $rep->BuscarTodos();
 
-        $this->render('professor/listar', [
+        $this->render("professor/listar", [
             'professores' => $professores,
         ]);
     }
