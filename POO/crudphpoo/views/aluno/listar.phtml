@@ -13,6 +13,25 @@
                     <th>Açoes</th>
                 </tr>
             </thead>
+            <tbody>
+                <?php
+                    foreach ($alunos as $aluno) {
+                        echo "
+                        <tr>
+                        <td>{$aluno->id}</td>
+                        <td>{$aluno->nome}</td>
+                        <td>{$aluno->matricula}</td>
+                        <td>{$aluno->cpf}</td>
+                        <td>{$aluno->email}</td>
+                         <td>
+                            <a href='' class='btn btn-outline-warning'>Editar</a>
+                            <button type='button' onclick='' data-bs-toggle='modal' data-bs-target='#exampleModal' class='btn btn-outline-danger'>Excluir</button>
+                        </td>
+                        <tr>
+                        ";
+                    }
+                ?>
+            </tbody>
         </table>
     </div>
 </section>

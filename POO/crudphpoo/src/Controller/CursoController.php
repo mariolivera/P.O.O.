@@ -8,21 +8,21 @@ class CursoController extends AbstractController
 {
     public function listar(): void
     {
-        echo "pagina de listar curso";
+        $this->render('curso/listar');
     }
 
     public function cadastrar(): void
     {
-        echo "pagina de cadastrar curso";
+        $this->render('curso/cadastrar');
     }
 
     public function excluir(): void
     {
-        echo "pagina de excluir curso";
+        $this->render('curso/excluir');
     }
 
     public function editar(): void
     {
-        echo "pagina de editar curso";
+        $this->render('curso/editar');
     }
 }

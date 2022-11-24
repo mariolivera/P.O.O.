@@ -6,10 +6,10 @@ namespace App\Model;
 
 class Professor extends Pessoa
 {
-    public string $nome;
     public string $cpf;
-    public array $endereco = [];
-    public ?string $formacao = null;
+    public string $endereco;
+    public string $formacao;
+    public string $nome;
     public bool $status;
-    public array $horariosDisponiveis = [];
+    //public array $horariosDisponiveis = [];
 }

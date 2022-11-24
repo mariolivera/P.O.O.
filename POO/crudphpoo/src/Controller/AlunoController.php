@@ -4,11 +4,20 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
+use App\Repository\AlunoRepository;
+
 class AlunoController extends AbstractController
 {
     public function listar(): void
     {
-        $this->render('aluno/listar');
+        $rep = new AlunoRepository();
+        
+        
+        $alunos = $rep->BuscarTodos();
+
+        $this->render('aluno/listar', [
+            'alunos'=> $alunos,
+        ]);
     }
 
     public function cadastrar():void

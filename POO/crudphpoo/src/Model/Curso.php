@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Model;
 
-class Curso
+class Curso extends Pessoa
 {
     public string $nome;
     public int $cargaHoraria;
