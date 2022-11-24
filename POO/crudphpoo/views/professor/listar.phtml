@@ -15,20 +15,22 @@
             </thead>
             <tbody>
                 <?php
-                    foreach ($professores as $professor) {
-                    echo "
-                        <tr>
-                        <td>{$professor->id}</td>
-                        <td>{$professor->status}</td>
-                        <td>{$professor->endereco}</td>
-                        <td>{$professor->nome}</td>
-                        <td>{$professor->cpf}</td>
-                         <td>
-                            <a href='professores/editar?id={$professor->$id}' class='btn btn-outline-warning'>Editar</a>
-                            <a href='professores/excluir?id={$professor->$id}' type='button' onclick='' data-bs-toggle='modal' data-bs-target='#exampleModal' class='btn btn-outline-danger'>Excluir</a>
-                        </td>
-                        <tr>
-                        ";
+                    if(isset($professores) && sizeOf($professores) > 0){
+                        foreach ($professores as $professor) {
+                            echo "
+                                <tr>
+                                    <td>{$professor->id}</td>
+                                    <td>{$professor->status}</td>
+                                    <td>{$professor->endereco}</td>
+                                    <td>{$professor->nome}</td>
+                                    <td>{$professor->cpf}</td>
+                                    <td>
+                                        <a href='professores/editar?id={$professor->id}' class='btn btn-outline-warning'>Editar</a>
+                                        <a href='professores/excluir?id={$professor->id}' type='button' onclick='' data-bs-toggle='modal' data-bs-target='#exampleModal' class='btn btn-outline-danger'>Excluir</a>
+                                    </td>
+                                <tr>
+                            ";
+                        }
                     }
                 ?>
             </tbody>

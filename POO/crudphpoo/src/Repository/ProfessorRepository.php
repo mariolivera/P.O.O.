@@ -15,7 +15,7 @@ class ProfessorRepository implements RepositoryInterface
     public function BuscarTodos(): iterable
     {
         $conexao = DatabaseConnection::abrirConexao();
-        $sql = "SELECT * FROM " .self::TABLE;
+        $sql = "SELECT * FROM ".self::TABLE;
         $query = $conexao->query($sql);
         $query->execute();
         return $query->fetchAll(PDO::FETCH_CLASS, Professor::class);
