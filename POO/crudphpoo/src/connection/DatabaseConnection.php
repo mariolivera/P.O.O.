@@ -3,8 +3,8 @@ declare(strict_types=1);
 
 namespace App\Connection;
 
-use mysqli;
 use PDO;
+
 class DatabaseConnection
 {
     public static function abrirConexao(): PDO
